@@ -63,7 +63,7 @@ ul.navbar_menu > li > a {
     padding-left: 40%;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
     .navbar_content {
         padding-left: 15px;
     }

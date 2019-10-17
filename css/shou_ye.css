@@ -72,7 +72,7 @@ span.news_title_yingwen {
     max-height: 100%;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 768px) {
     .new_left {
         margin-bottom: 10px;
         padding-left: 35px;
