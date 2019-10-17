@@ -1,8 +1,9 @@
-.container{
+.container {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
+
 .navbar {
     min-height: 70px;
 }
@@ -45,9 +46,9 @@ ul.navbar_menu > li > a {
     background-color: lightgray;
 }
 
-#center_cntent_id {
-    margin-top: 70px;
+.center_content {
     width: 100%;
+    margin-top: 70px;
 }
 
 @media all and (max-width: 360px) {
