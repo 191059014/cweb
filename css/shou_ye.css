@@ -86,8 +86,13 @@ span.news_title_yingwen {
         margin-bottom: 10px;
     }
 
+    .solution_row {
+        padding-left: 15px;
+    }
+
     .scope_item_a {
         width: 96%;
         margin-left: 2%;
+        background-color: #e5e5e5;
     }
 }
