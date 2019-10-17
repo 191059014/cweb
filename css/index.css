@@ -76,4 +76,7 @@ ul.navbar_menu > li > a {
         margin-top: 0;
         margin-bottom: 0;
     }
+    .footer_content p {
+        padding-left: 20%;
+    }
 }
