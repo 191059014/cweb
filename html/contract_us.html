@@ -2,13 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>联系我们</title>
+    <style type="text/css">
+
+        #container {
+            width: 95%;
+            height: 600px;
+            margin: 0;
+        }
+
+        .contract_detail {
+            padding-left: 15%;
+        }
+
+        .contract_detail h2:first-child {
+            border-bottom: 1px gainsboro solid;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contract_detail p {
+            font-size: 2rem;
+        }
+
+        .contract_breadcrumb {
+            padding-left: 15%;
+        }
+
+        .contract_content div.row {
+            padding-right: 0;
+        }
+
+        .contract_center_content {
+            margin-right: 0;
+        }
+
+        @media all and (max-width: 768px) {
+            .contract_content img {
+                height: 60px;
+            }
+
+            .contract_breadcrumb {
+                padding-left: 10%;
+            }
+
+            .contract_detail {
+                padding-left: 10%;
+                padding-right: 10%;
+                font-weight: bold;
+            }
+
+            .contract_detail p {
+                font-size: 1rem;
+            }
+
+            .contract_detail h2:first-child {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            #container {
+                width: 98%;
+                margin-left: 1%;
+                height: 200px;
+            }
+
+            .gaode_map {
+                padding-right: 0;
+            }
+
+        }
+    </style>
 </head>
 <body>
-<div>
-    <img class="img-responsive" src="/cweb/img/contact_us.jpg">
+<div class="contract_content">
+    <img width="100%" src="/cweb/img/contact_us.jpg">
+    <div class="row contract_center_content">
+        <ul class="breadcrumb contract_breadcrumb">
+            <li>您的位置：首页</li>
+            <li class="active">联系我们</li>
+        </ul>
+        <div class="col-lg-5 contract_detail">
+            <h2>联系方式</h2>
+            <p>地 址：武汉市洪山区野芷湖南路保利心语3期</p>
+            <p>总 机：010-62570007</p>
+            <p>传 真：010-82523227</p>
+            <p>邮 编：100190</p>
+            <p>网 址：www.yuanlinb.com</p>
+        </div>
+        <div class="col-lg-7 gaode_map">
+            <div id="container" tabindex="0"></div>
+        </div>
+    </div>
+
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            center: [114.323301, 30.479692],
+            zoom: 11
+        });
+        AMap.plugin('AMap.ToolBar', function () {
+            var toolbar = new AMap.ToolBar();
+            map.addControl(toolbar)
+        });
+        // 创建一个 icon
+        var endIcon = new AMap.Icon({
+            size: new AMap.Size(50, 68),
+            image: 'https://a.amap.com/jsapi_demos/static/demo-center/icons/dir-marker.png',
+            imageSize: new AMap.Size(200, 60),
+            imageOffset: new AMap.Pixel(-130, -3)
+        });
+        // 将 icon 传入 marker
+        var endMarker = new AMap.Marker({
+            position: new AMap.LngLat(114.323301, 30.479692),
+            icon: endIcon,
+            offset: new AMap.Pixel(-13, -30)
+        });
+        // 创建一个 Marker 实例：
+        // 经纬度对象，也可以是经纬度构成的一维数组
+        // 将创建的点标记添加到已有的地图实例：
+        // 移除已创建的 marker map.remove(marker);
+        // var marker = new AMap.Marker({ position: new AMap.LngLat(114.323301,30.479692), title: '武汉' });
+        map.add(endMarker);
+    });
+</script>
+<script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
 </body>
+
 </html>

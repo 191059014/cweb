@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>首页</title>
@@ -14,6 +15,7 @@
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <!-- Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=8b94839828585bafe042401878606ef7"></script>
 <body>
 <div class="app">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -27,7 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand navbar_logo_content">
-                    <img src="/cweb/img/logo.png" height="50px" width="50px">&nbsp;&nbsp;鑫贝科技有限公司
+                    <img src="/cweb/img/logo.png" height="50px" width="50px">&nbsp;&nbsp;鑫贝网络科技有限公司
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
@@ -53,11 +55,11 @@
 
     <div class="center_content"></div>
     <div class="footer_content">
-        <p>联系我们</p>
+        <h3>联系我们</h3>
         <p>地址：武汉市洪山区板桥xxxx路100号</p>
         <p>邮箱：123456789@qq.com</p>
         <p>电话：13232323232</p>
-        <p class="copyright">Copyright © 2019-2029 黄彪 www.yuanlinb.com All Rights Reserved.</p>
+        <p class="copyright">Copyright © 2019-2029 www.yuanlinb.com All Rights Reserved.</p>
     </div>
 </div>
 
@@ -66,6 +68,9 @@
     $(function () {
         // 默认加载首页
         loadCenterPage('/cweb/html/shou_ye.html', 'shou_ye');
+        document.getElementById("example-navbar-collapse").addEventListener('click', function () {
+            $('#example-navbar-collapse').removeClass('in');
+        });
     });
 
     // 加载中间的页面内容
